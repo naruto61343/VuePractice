@@ -1,0 +1,49 @@
+<html>
+<head>
+<title>Document</title>
+<link
+ rel="stylesheet"
+ href="./css/style.css"
+>
+
+</head>
+<body>
+ <div id="app">
+        <section>
+                <div class="container">
+                    <div class="title"> 
+                        <!-- <img
+                            class="logo"
+                            v-bind:src="src"
+                        >         -->
+                          <img
+                            class="logo"
+                            :src="src"> <!--:是v-bind: 的縮寫-->
+                        
+                         <!-- <h1> v-text="title"<</h1> -->
+                        <h1>{{title}}</h1>
+        
+                    </div>
+                </div>
+            </section>
+
+
+ </div>
+ <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.js'></script>
+ <script>
+     let data = {
+        src:'./image/cat.jpg',
+        title : 'Vue.js 手牽手'
+     }
+
+     let vm = new Vue({
+        el:'#app', //View
+        data:data //Model
+     })
+
+ </script>
+
+</body>
+
+
+</html>

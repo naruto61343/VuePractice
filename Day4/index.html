@@ -1,0 +1,95 @@
+<html>
+<head>
+<title>Document</title>
+<link
+ rel="stylesheet"
+ href="./css/style.css"
+>
+
+</head>
+<body>
+ <div id="app">
+        <section>
+                <div class="container">
+                    <div class="title"> 
+                        <img
+                            class="logo"
+                            :src="src"
+                        >        
+                        <h1>{{title}}</h1>
+                        
+                        <div calss="description">
+                            <!--如果不是第一天就秀出來-->
+                            <!--index ! = 0-->
+                            <a 
+                               v-if= "index > 0" 
+                               class="left" 
+                               v-on:click="changeIndex(-1)"></a>
+                           
+                               <span class="number">{{index+1}}</span>
+                               <span>{{today.type}}</span>
+                              <a
+                                class="title"
+                                target="vue-iron"
+                                :href="today.link"
+                              >{{today.title}}</a>
+                              <!--如果不是最後一天就秀出來-->
+                              <!--index ! = this.menu.length - 1 -->
+                              <!--index ! = total - 1 -->
+                            <a 
+                               v-if= "index < total-1" 
+                               class="right" 
+                               @click="changeIndex(1)"
+                               
+                               ></a>
+                        </div>
+        
+                    </div>
+                </div>
+            </section>
+
+
+ </div>
+ <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.js'></script>
+ <script>
+     let data = {
+        src:'./image/cat.jpg',
+        title : 'Vue.js',
+        index : 0,
+        menu :[
+            {type:'第一天', title:'christchurch', link:'javacript:;'},
+            {type:'第二天', title:'Hokitikka', link:'javacript:;'},
+            {type:'第三天', title:'Fox Gracier', link:'javacript:;'},
+            {type:'第四天', title:'Wanaka', link:'javacript:;'},
+            {type:'第五天', title:'Queenstown', link:'javacript:;'},
+            {type:'第六天', title:'Te Annu', link:'javacript:;'},
+            {type:'第七天', title:'Dunedin', link:'javacript:;'},
+
+        ]
+     }
+
+     let vm = new Vue({
+        el:'#app',
+        data: data,
+        computed :{
+            today(){
+                return this.menu[this.index]
+            },
+           total(){
+               return this.menu.length
+           }
+        },
+        methods :{
+            changeIndex(change){
+                // let length = this.menu.length
+                // this.index = (this.index + change + length) % length
+                this.index = (this.index + change + this.total) % this.total
+            }
+        }
+     })
+ </script>
+
+</body>
+
+
+</html>

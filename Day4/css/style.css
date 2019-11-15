@@ -1,0 +1,28 @@
+.title{
+    height: 400px;
+}
+
+.left, .right{
+    display:inline-block;
+    font-size: 0;
+    padding:1rem ;
+    background-color: #555;
+}
+
+
+.left::before{
+    content:'<';
+    font-size: 1rem;
+    color:#ffffff;
+  }
+  .right::before{
+    content:'>';
+    font-size: 1rem;
+    color:#ffffff;
+  }
+
+  .number{
+      background-color: darkcyan;
+      height: 400px;
+      font-size: 25px;      
+  }
