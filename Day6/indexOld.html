@@ -1,0 +1,57 @@
+<html>
+<head>
+<title>Use v-for</title>
+<meta
+    name="viewport"
+    content="width=device-width , initial-scale=1.0"
+>
+<meta
+    http-equiv="X-UA-Compatible"
+    content="ie=edge"
+>
+
+<link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body>
+ <div id="app">
+        <section>
+                <div class="container">
+                    <div class="title"> 
+                      <div>
+                        <select>
+                           <option>Christchurch</option>
+                           <option>Hokitikka</option>
+                           <option>Fox Glacier</option>
+                           <option>Wanaka</option>
+                           <option>Queenstown</option>
+                           <option>Te Annu</option>
+                           <option>Dunedin</option>
+                           <option>Mount Cook</option>
+                           <option>Tekapo</option>                            
+                        </select>
+                        <input type="text">
+                        <div class="menuItem" v-for="item in menu">
+                            <span>1</span><span>Christchurch</span>
+                            <a
+                               href="javacript:;" 
+                               target="vue-iron" 
+                               class="title"
+                            >
+                            取車，超市買東西，check in
+                        </a>
+                        </div>
+                      </div>  
+                    </div>
+                </div>
+        </section>
+ </div>
+ <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.js'></script>
+ <script src="day6Old.js">
+
+ </script>
+
+</body>
+
+
+</html>

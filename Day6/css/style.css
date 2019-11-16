@@ -1,0 +1,17 @@
+.container{
+    position: relative; 
+    width: 400px;
+    color:lightcoral;
+    text-align: left;
+    font-family: "Lucida Sans";
+    background-color: lightgrey;
+    margin-left: 500px;
+}
+
+tr{
+    width: 500px;
+    text-align: left;
+    color:grey;
+    font-family: "微軟正黑體";
+    font-size: 14px;
+}
