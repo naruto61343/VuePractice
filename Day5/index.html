@@ -1,0 +1,115 @@
+<html>
+<head>
+<title>表單處理雙向資料</title>
+<link
+ rel="stylesheet"
+ href="./css/style.css"
+>
+
+</head>
+<body>
+ <div id="app">
+        <section>
+                <div class="container">
+                    <div class="title"> 
+                     <div>
+                         {{name}}，
+                         {{sex}}姓，
+                         年齡為{{age}},
+                         <br/>
+                         {{favor.length ? '喜歡': ''}} {{favor.join('、')}}，
+                         {{member ? '已': '未'}}成為貓奴。
+                        </div>    
+                      <div class="menu">
+                        <table> 
+                            <tr>
+                                <td>
+                                    姓名 :
+                                </td>
+                                <td>
+                                    <input v-model="name"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                 性別 :
+                                </td>
+                                <td>
+                                   <input
+                                     type="radio"
+                                     value="女"
+                                     v-model="sex"
+                                   />女
+                                   <input
+                                   type="radio"
+                                   value="男"  
+                                   v-model="sex"                                 
+                                 />男
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                  年齡 :
+                                </td>
+                                <td>
+                                    <select v-model="age">
+                                        <option>20歲以下</option>
+                                        <option>20~30之間</option>
+                                        <option>30~40之間</option>
+                                        <option>40歲以上</option>
+                                    </select>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                  興趣:
+                                </td>
+                                <td>
+                                  <input
+                                    type="checkbox"
+                                    value="打扣"
+                                    v-model="favor"
+                                  />打扣    
+                                  <input
+                                  type="checkbox"
+                                  value="旅遊"
+                                  v-model="favor"
+                                />旅遊  
+                                <input
+                                type="checkbox"
+                                value="養貓"
+                                v-model="favor"
+                              />養貓
+                                </td>
+                            </tr>
+                            <tr>
+                               <td>
+                                 會員:
+                               </td> 
+                               <td>
+                                  <input
+                                  type="checkbox"
+                                  value="打扣"
+                                  v-model="member"
+                                />加入   
+                               </td>
+                            </tr>
+
+
+                        </table> 
+                      </div>       
+                    </div>
+                </div>
+ </div>
+        </section>
+
+
+ </div>
+ <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.js'></script>
+ <script src="day5.js"></script>
+
+</body>
+
+
+</html>

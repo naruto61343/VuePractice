@@ -1,0 +1,125 @@
+<html>
+<head>
+<title>表單處理雙向資料</title>
+<link
+ rel="stylesheet"
+ href="./css/style.css"
+>
+
+</head>
+<body>
+ <div id="app">
+        <section>
+                <div class="container">
+                    <div class="title"> 
+                     <div>
+                       Cathy，
+                       女性，
+                       年齡為20~30歲間,
+                       <br/>
+                       喜歡 打扣、旅遊、養貓，已成為貓奴。
+                      </div>    
+                      <div class="menu">
+                        <table> 
+                            <tr>
+                                <td>
+                                    姓名 :
+                                </td>
+                                <td>
+                                    <input value="Cathy"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                 性別 :
+                                </td>
+                                <td>
+                                   <input
+                                     type="radio"
+                                     value="女"
+                                     checked
+                                   />女
+                                   <input
+                                   type="radio"
+                                   value="男"                                   
+                                 />男
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                  年齡 :
+                                </td>
+                                <td>
+                                    <select>
+                                        <option>20歲以下</option>
+                                        <option>20~30之間</option>
+                                        <option selected>30~40之間</option>
+                                        <option>40歲以上</option>
+                                    </select>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                  興趣:
+                                </td>
+                                <td>
+                                  <input
+                                    type="checkbox"
+                                    value="打扣"
+                                    checked
+                                  />打扣    
+                                  <input
+                                  type="checkbox"
+                                  value="旅遊"
+                                  checked
+                                />旅遊  
+                                <input
+                                type="checkbox"
+                                value="養貓"
+                                checked
+                              />養貓
+                                </td>
+                            </tr>
+                            <tr>
+                               <td>
+                                 會員:
+                               </td> 
+                               <td>
+                                  <input
+                                  type="checkbox"
+                                  value="打扣"
+                                  checked
+                                />加入   
+                               </td>
+                            </tr>
+
+
+                        </table> 
+                      </div>       
+                    </div>
+                </div>
+ </div>
+        </section>
+
+
+ </div>
+ <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.js'></script>
+ <script src="day5.js"></script>
+ <script>
+     let data = {
+        src:'./image/cat.jpg',
+        title : 'Vue.js 手牽手'
+     }
+
+     let vm = new Vue({
+        el:'#app', //View
+        data:data //Model
+     })
+
+ </script>
+
+</body>
+
+
+</html>
