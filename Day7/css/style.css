@@ -1,0 +1,23 @@
+.container{
+    position: relative; 
+    width: 400px;
+    color:lightcoral;
+    text-align: left;
+    font-family: "Lucida Sans";
+    background-color: rgb(231, 226, 177);
+    margin-left: 450px;
+}
+
+tr{
+    width: 500px;
+    text-align: left;
+    color:aqua;
+    font-family: "Lucida Sans";
+    font-size: 12px;
+}
+
+.inputstyle{
+    border-radius: 6px; 
+    background-color: aquamarine;
+    margin-left: 30px;
+}
