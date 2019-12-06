@@ -1,0 +1,21 @@
+.container{
+    position: relative; 
+    width: 400px;
+    color:lightcoral;
+    text-align: left;
+    font-family: "Lucida Sans";
+    background-color: lightgrey;
+   
+}
+
+tr{
+    width: 500px;
+    text-align: left;
+    color:grey;
+    font-family: "微軟正黑體";
+    font-size: 14px;
+}
+
+.input{
+    width: 900px;
+}
